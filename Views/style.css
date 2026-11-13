@@ -1,0 +1,92 @@
+* { 
+    box-sizing: border-box; 
+}
+body {
+     font-family: Arial, sans-serif; 
+     background: #f0f2f5;
+      margin: 0;
+     }
+.site-header {
+     display: flex;
+      justify-content: space-between;
+       align-items: center; 
+       background: #1c1e21; 
+       color: white; 
+       padding: 12px 24px; 
+    }
+.site-header a { 
+    color: white; 
+    text-decoration: none;
+ }
+.site-header span {
+     margin-right: 12px; 
+    }
+.container { 
+    max-width: 700px;
+     margin: 30px auto; 
+     padding: 0 16px; }
+.narrow {
+     max-width: 450px;
+     }
+fieldset { 
+    background: white; 
+    border: 2px solid #333; 
+    margin: 20px 0; 
+    padding: 12px 20px;
+ }
+legend { 
+    font-weight: bold;
+ }
+.card { 
+    background: white;
+     border-radius: 8px;
+      padding: 16px; 
+      margin: 16px 0; 
+      box-shadow: 0 1px 3px rgba(0,0,0,.15);
+     }
+label { 
+    display: block;
+     margin-top: 12px;
+     }
+input, textarea { 
+    width: 100%;
+     padding: 8px;
+      border: 1px solid #ccc;
+       border-radius: 6px;
+        font-family: inherit; 
+    }
+button {
+     margin-top: 8px;
+      padding: 6px 14px; 
+      border: none; 
+      border-radius: 6px; 
+      background: #1877f2; 
+      color: white; 
+      cursor: pointer; 
+    }
+.inline-form { 
+    display: inline; 
+}
+.add-btn { 
+    display: inline-block;
+     background: #2e9e4f; 
+     color: white; 
+     padding: 6px 14px; 
+     border-radius: 6px; 
+     text-decoration: none; 
+     margin: 8px 0; 
+    }
+.edit-btn { 
+    display: inline-block; 
+    background: #1877f2; 
+    color: white; 
+    padding: 6px 14px; 
+    border-radius: 6px; 
+    text-decoration: none;
+ }
+.delete-btn { 
+    background: #d93025; 
+}
+.error { 
+    color: red; 
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Show One tweet</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include("header") %>
+  <div class="container">
+    <h1>Welcome to Tweeter</h1>
+    <div class="card">
+      <h2><%= tweet.title %></h2>
+      <small><%= formatDate(tweet.createdAt) %></small>
+      <p><%= tweet.tweet %></p>
+    </div>
+
+    <form action="/tweet/delete/<%= tweet._id %>" method="POST" class="inline-form">
+      <button type="submit" class="delete-btn">Delete</button>
+    </form>
+    <a href="/tweet/edit/<%= tweet._id %>" class="edit-btn">Edit Post</a>
+    <p><a href="/tweet">Back to all tweets</a></p>
+  </div>
+</body>
+</html>

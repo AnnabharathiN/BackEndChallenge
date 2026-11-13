@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title><%= heading %></title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include("header") %>
+  <div class="container narrow">
+    <h1>Welcome to Tweeter</h1>
+    <h3><%= heading %></h3>
+    <form action="<%= action %>" method="POST">
+      <label>Title</label>
+      <input type="text" name="title" value="<%= tweet.title %>" />
+      <label>Tweet</label>
+      <textarea name="tweet" rows="4"><%= tweet.tweet %></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <% if (error) { %><p class="error"><%= error %></p><% } %>
+  </div>
+</body>
+</html>

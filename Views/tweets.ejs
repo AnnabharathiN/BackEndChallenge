@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Tweet</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include("header") %>
+  <div class="container">
+    <h1>Welcome to Tweeter</h1>
+    <p>There are <%= tweets.length %> tweets</p>
+    <a href="/addTweet" class="add-btn">Add Tweet</a>
+
+    <% tweets.forEach(function (t) { %>
+      <div class="card">
+        <h3><%= t.title %></h3>
+        <small><%= formatDate(t.createdAt) %></small>
+        <p><%= t.tweet %></p>
+        <a href="/tweet/<%= t._id %>">See More</a>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
